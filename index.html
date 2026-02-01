@@ -4,6 +4,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faheem Nawaz</title>
     <style>
+  .photo-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;   /* important for mobile */
+  }
+
+  .photo-container img {
+    width: 280px;        /* desktop default */
+    max-width: 90%;      /* mobile safety */
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  /* 📱 Mobile view */
+  @media (max-width: 600px) {
+    .photo-container img {
+      width: 220px;
+    }
+  }
+
+  /* 🖥️ Large desktop */
+  @media (min-width: 1200px) {
+    .photo-container img {
+      width: 300px;
+    }
+  }
+    </style>
+        
         body {
   overflow-x: hidden;
 }
