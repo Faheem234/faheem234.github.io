@@ -15,6 +15,46 @@
     font-family: Arial, sans-serif;
     background: #f2f2f2;
   }
+.image-row {
+  display: flex;
+  gap: 20px;
+}
+
+.image-row img {
+  width: 50%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+  }
+
+  .image-row img {
+    width: 100%;
+  }
+}
 
   /* Center page */
   .page {
@@ -98,19 +138,31 @@
 </head>
 
 <body>
-  <div class="page">
-    <div class="container">
+  <div class="image-row">
+  <img src="photo.jpg" alt="Photo 1" onclick="openLightbox(this.src)">
+  <img src="photo2.jpg" alt="Photo 2" onclick="openLightbox(this.src)">
+</div>
 
-      <div class="image-row">
-        <img src="photo.jpg" alt="Photo 1">
-        <img src="photo2.jpg" alt="Photo 2">
-      </div>
-
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
       <h1>Faheem Nawaz</h1>
       <h2>B.Tech CSE Student</h2>
       <p>This is my personal info page.</p>
 
     </div>
   </div>
+ <script>
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
