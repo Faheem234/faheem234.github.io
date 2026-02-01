@@ -29,6 +29,19 @@ p, h1, h2 {
     text-align: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   }
+        .photo-section {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.photo-section img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
   img {
     width: 280px;            /* MUCH BIGGER PHOTO */
@@ -66,12 +79,20 @@ p {
     </style>
 </head>
 <body>
+    <div class="photo-section">
+  <img src="photo.jng" alt="Profile Photo">
+  <img src="photo2.jpg" alt="Second Photo">
+    </div>
 
     <div class="card">
         <img src="photo.jpg" alt="Faheem">
+        <div class="photo-section">
+  <img src="photo.jng" alt="Profile Photo">
+  <img src="photo2.jpg" alt="Second Photo">
+        </div>
         <h1>Faheem Nawaz</h1>
         <p>B.Tech CSE Student</p>
-        <p>Date of birth:17 July 2005</p>
+        <p>Gmail: shaikfaheem794@gmail.com</p>
         <p>This is my personal info page.</p>
     </div>
 
