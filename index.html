@@ -6,30 +6,32 @@
     <style>
   .photo-container {
     display: flex;
-    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;   /* important for mobile */
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
   }
 
   .photo-container img {
-    width: 280px;        /* desktop default */
-    max-width: 90%;      /* mobile safety */
-    height: auto;
-    border-radius: 16px;
-    object-fit: cover;
+    width: 260px;          /* ✅ fixed clean size */
+    height: 340px;         /* ✅ same height for both */
+    object-fit: cover;     /* crop nicely */
+    border-radius: 18px;
   }
 
-  /* 📱 Mobile view */
+  /* 📱 Mobile */
   @media (max-width: 600px) {
     .photo-container img {
       width: 220px;
+      height: 280px;
     }
   }
 
-  /* 🖥️ Large desktop */
+  /* 🖥️ Large desktop screens */
   @media (min-width: 1200px) {
     .photo-container img {
-      width: 300px;
+      width: 240px;        /* ⬅️ smaller than before */
+      height: 320px;
     }
   }
     </style>
