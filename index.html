@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -31,6 +31,19 @@
     padding: 30px;
     border-radius: 16px;
   }
+ .image-row {
+  display: flex;
+  flex-direction: row;   /* 👈 force side by side */
+  gap: 20px;
+  width: 100%;
+}
+
+.image-row img {
+  flex: 1;               /* 👈 equal width */
+  aspect-ratio: 3 / 4;   /* keeps clarity */
+  object-fit: cover;
+  border-radius: 18px;
+}
 
   /* IMAGE ROW */
   .image-row {
