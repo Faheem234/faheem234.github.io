@@ -115,6 +115,20 @@
       .hero-grid { grid-template-columns: 1fr; gap: 25px; }
       .profile-card { max-width: 360px; }
       .card-grid { grid-template-columns: 1fr; }
+      .photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.photo-gallery img {
+  width: 140px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+}
     }
   </style>
 </head>
@@ -148,10 +162,16 @@
         </div>
         <aside class="profile-card" aria-label="Profile summary">
           <!-- Upload your photo as photo.jpg in the repository root to use it here. -->
-          <img class="avatar" src="photo.jpg" alt="Portrait of Faheem Nawaz Shaik" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-          <div class="avatar-fallback" hidden>FS</div>
-          <h2 style="margin-top:16px">Faheem Nawaz Shaik</h2>
-          <p>Graduate · Developer · Lifelong learner</p>
+          <div class="photo-gallery">
+  <img src="photo.jpg"
+       alt="Faheem Nawaz Shaik - Photo 1">
+
+  <img src="photo1.jpg"
+       alt="Faheem Nawaz Shaik - Photo 2">
+</div>
+
+<h2 style="margin-top:16px">Faheem Nawaz Shaik</h2>
+<p>Graduate · Developer · Lifelong learner</p>
         </aside>
       </div>
     </section>
